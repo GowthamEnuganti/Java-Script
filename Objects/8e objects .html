@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8 e object</title>
+</head>
+<body>
+  <script>
+    function isSameProduct(product1, product2) {
+        if (product1.name === product2.name && 
+        product1.price === product2.price) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095
+      };
+
+      const product2 = {
+        name: 'socks',
+        price: 1090
+      };
+
+      console.log(isSameProduct(product1, product2));
+
+
+      console.log('good morning'.toUpperCase());
+
+
+      console.log('testing' .repeat(10));
+  </script>
+</body>
+</html>

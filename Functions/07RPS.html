@@ -4,72 +4,63 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Function Rock,paper,scissor game</title>
+  <title>Function Rock, Paper, Scissor Game</title>
 </head>
 <body>
-  <p>Rock Paper Scissor</p>
-  <button  onclick="
-  playGame('Rock');
-  ">Rock</button>
-  <button onclick="
-   playGame('paper');
-  
-  ">Paper</button>
-  <button onclick="
-  playGame('scissor');
-  
-  ">Scissor</button>
+  <p>Rock, Paper, Scissor</p>
+  <button onclick="playGame('Rock');">Rock</button>
+  <button onclick="playGame('Paper');">Paper</button>
+  <button onclick="playGame('Scissor');">Scissor</button>
+
   <script>
-    function playGame(playerMove){
+    function playGame(playerMove) {
       const computerMove = pickComputerMove();
     
-    let result = '';
-    if (playerMove === 'scisssor'){
-      if(computerMove === 'Rock'){
-        result = 'You Loose';
-      }else if(computerMove === 'Paper'){
-        result = 'You Win';
-      }else if(computerMove === 'Scissor'){
-        result = 'Tie.';
+      let result = '';
+      if (playerMove === 'Scissor') {
+        if (computerMove === 'Rock') {
+          result = 'You Lose';
+        } else if (computerMove === 'Paper') {
+          result = 'You Win';
+        } else if (computerMove === 'Scissor') {
+          result = 'Tie.';
+        }
+      } else if (playerMove === 'Paper') {
+        if (computerMove === 'Rock') {
+          result = 'You Win';
+        } else if (computerMove === 'Paper') {
+          result = 'Tie.';
+        } else if (computerMove === 'Scissor') {
+          result = 'You Lose';
+        }
+      } else if (playerMove === 'Rock') {
+        if (computerMove === 'Rock') {
+          result = 'Tie.';
+        } else if (computerMove === 'Paper') {
+          result = 'You Lose';
+        } else if (computerMove === 'Scissor') {
+          result = 'You Win';
+        }
       }
-    } else if(playerMove === 'paper'){
-      if(computerMove === 'Rock'){
-        result = 'You Win';
-      }else if(computerMove === 'Paper'){
-        result = 'Tie.';
-      }else if(computerMove === 'Scissor'){
-        result = 'You Loose';
-      }
-    } else if(playerMove === 'Rock'){
-      if(computerMove === 'Rock'){
-        result = 'Tie.';
-      }else if(computerMove === 'Paper'){
-        result = 'You Loose';
-      }else if(computerMove === 'Scissor'){
-       result = 'You Win';
-     }
-     }
       
-      
-   
-    alert(`You picked ${playerMove}. computer picked ${computerMove}. ${result}`);}
-    
-    function pickComputerMove(){
+      alert(`You picked ${playerMove}. The computer picked ${computerMove}. ${result}`);
+    }
+
+    function pickComputerMove() {
       const randomNumber = Math.random() * 3;
-    
+
       let computerMove = '';
       
-    if(randomNumber >= 0 && randomNumber < 1 ){
-      computerMove ='Rock';
-    }
-    else if(randomNumber >= 1  && randomNumber < 2 ){
-      computerMove = 'Paper';
-    }  
-    else if(randomNumber >= 2  && randomNumber < 3){
-      computerMove = 'Scissor';
-    }  
+      if (randomNumber >= 0 && randomNumber < 1) {
+        computerMove = 'Rock';
+      } else if (randomNumber >= 1 && randomNumber < 2) {
+        computerMove = 'Paper';
+      } else if (randomNumber >= 2 && randomNumber < 3) {
+        computerMove = 'Scissor';
+      }
+
       return computerMove;
     }
   </script>
 </body>
-</html> 
+</html>
