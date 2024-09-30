@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercises of 10</title>
+  <style>
+    .add {
+      background-color: rgb(255, 216, 20);
+      border: none;
+      padding: 10px 25px;
+      border-radius: 20px;
+
+    }
+    .toggle-button {
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+
+  </style>
+</head>
+<body>
+  <button class="add">Add to Cart</button>
+  <button class="toggle-button js-button" onclick="
+   buttonElement();
+
+  ">Gaming</button>
+   <button class="toggle-button js-button-2" onclick="
+   buttonElement2();
+
+  ">Music</button>
+   <button class="toggle-button js-button-3" onclick="
+   buttonElement3();
+
+  ">Tech</button>
+
+
+
+
+
+
+  <script>
+    const button = document.querySelector('.add');
+    console.log(button.classList.contains('add'));
+
+    function buttonElement(){
+      const button = document.querySelector('.js-button');
+      if(!button.classList.contains('is-toggled')){
+        button.classList.add('is-toggled');
+      } else{
+        button.classList.remove('is-toggled');
+      }
+
+     }
+     function buttonElement2(){
+      const button = document.querySelector('.js-button-2');
+      if(!button.classList.contains('is-toggled')){
+        button.classList.add('is-toggled');
+      } else{
+        button.classList.remove('is-toggled');
+      }
+
+     }
+     function buttonElement3(){
+      const button = document.querySelector('.js-button-3');
+      if(!button.classList.contains('is-toggled')){
+        button.classList.add('is-toggled');
+      } else{
+        button.classList.remove('is-toggled');
+      }
+
+     }
+  </script>
+</body>
+</html>
