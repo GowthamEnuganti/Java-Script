@@ -56,7 +56,31 @@
       i--;
     }
     //7
-    
+    const number = [1, 2, 3];    
+    const res = [];
+
+
+    for (let i = 0; i < number.length; i++) {
+      res.push(number[i] + 1);
+
+    }
+    console.log(res);
+
+    //8
+    function addOne(array) {
+        const result = [];
+
+        for (let i = 0; i < array.length; i++) {
+          result.push(array[i] + 1);
+        }
+
+        return result;
+      }
+
+      console.log(addOne([1, 2, 3]));
+      console.log(addOne([-2, -1, 0, 99]));
+      //9
+      
   </script>
 </body>
 </html>
